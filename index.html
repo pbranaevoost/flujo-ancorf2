@@ -9,23 +9,9 @@
         body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #0891b2 0%, #0e7490 100%); min-height: 100vh; color: #1f2937; }
         .container { max-width: 1600px; margin: 0 auto; padding: 15px; }
         
-        /* Tabs styles */
-        .tab-container { margin-bottom: 20px; }
-        .tab-buttons { display: flex; background: rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; }
-        .tab-button { flex: 1; padding: 12px; text-align: center; color: white; cursor: pointer; border-radius: 6px; font-weight: 600; transition: all 0.3s ease; }
-        .tab-button.active { background: white; color: #0891b2; }
-        .tab-button:hover:not(.active) { background: rgba(255,255,255,0.1); }
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
-        
         .header { text-align: center; color: white; margin-bottom: 20px; }
         .header h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
         .header p { font-size: 1rem; opacity: 0.9; }
-        .legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-bottom: 20px; }
-        .legend-item { display: flex; align-items: center; background: rgba(255,255,255,0.15); padding: 6px 12px; border-radius: 15px; color: white; font-weight: 600; font-size: 0.8rem; }
-        .legend-icon { width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; }
-        .trigger { background: #10b981; } .decision { background: #f59e0b; } .email-auto { background: #3b82f6; }
-        .email-rescue { background: #ef4444; } .whatsapp { background: #25d366; } .alert { background: #8b5cf6; } .transfer { background: #1f2937; }
         .flow-container { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
         .stage-title { font-size: 1.3rem; font-weight: 800; color: #1f2937; text-align: center; margin: 20px 0; padding: 8px 16px; background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); border-radius: 8px; border-left: 3px solid #0891b2; }
         .flow-section { margin-bottom: 30px; border: 1px solid #e5e7eb; border-radius: 8px; padding: 15px; }
@@ -64,38 +50,18 @@
         .lang-de { background: #fef3c7; color: #92400e; border: 1px solid #f59e0b; }
         .lang-it { background: #dcfce7; color: #166534; border: 1px solid #22c55e; }
         
-        /* Templates styles */
-        .template-section { margin-bottom: 30px; }
-        .template-item { background: #f9fafb; padding: 15px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #0891b2; }
-        .template-item h4 { color: #0891b2; margin-bottom: 10px; }
-        .template-content { font-size: 0.85rem; line-height: 1.5; }
-        .whatsapp-template { border-left-color: #25d366; }
-        .whatsapp-template h4 { color: #166534; }
-        .rescue-template { border-left-color: #ef4444; }
-        .rescue-template h4 { color: #991b1b; }
-        
-        .language-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px; }
-        
         @media (max-width: 768px) {
             .container { padding: 10px; }
             .flow-row { flex-direction: column; }
             .branch-container { flex-direction: column; }
             .header h1 { font-size: 1.5rem; }
             .node { max-width: 100%; margin: 2px 0; }
-            .language-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="tab-container">
-            <div class="tab-buttons">
-                <div class="tab-button active" onclick="showTab('flow')">Marketing Flow</div>
-                <div class="tab-button" onclick="showTab('templates')">Email & WhatsApp Templates</div>
-            </div>
-        </div>
-        
-        <div id="flow-tab" class="tab-content active">
+        <div>
             <div class="header">
                 <h1>Flujo Marketing Automation - Residencial Ancor F2</h1>
                 <p>Flujo Completo de Comunicación - Arico, Tenerife</p>
@@ -114,16 +80,6 @@
             </div>
             
             <div class="flow-container">
-                <div class="legend">
-                    <div class="legend-item"><div class="legend-icon trigger"></div>Trigger</div>
-                    <div class="legend-item"><div class="legend-icon decision"></div>Decisión</div>
-                    <div class="legend-item"><div class="legend-icon email-auto"></div>Email Auto</div>
-                    <div class="legend-item"><div class="legend-icon email-rescue"></div>Email Rescate</div>
-                    <div class="legend-item"><div class="legend-icon whatsapp"></div>WhatsApp</div>
-                    <div class="legend-item"><div class="legend-icon alert"></div>Alert</div>
-                    <div class="legend-item"><div class="legend-icon transfer"></div>Transfer</div>
-                    <div class="legend-item" style="background: #bae6fd;"><div class="legend-icon trigger"></div>Directorios</div>
-                </div>
                 
                 <!-- LEAD ENTRANTE -->
                 <div class="flow-section">
@@ -261,7 +217,7 @@
                         <!-- FLUJO WHATSAPP UNIVERSAL -->
                         <div style="margin-bottom: 15px;">
                             <div class="node node-whatsapp" style="max-width: 100%; display: block; margin: 0 auto;">
-                                <div class="timing-badge rescue-badge">+7 días</div>
+                                <div class="timing-badge rescue-badge">+6 días</div>
                                 <div class="node-title">WhatsApp Rescate Universal - Oportunidad Tenerife</div>
                                 <div class="node-desc">Tu vivienda en el paraíso te espera</div>
                                 <div class="templates" style="background: #dcfce7;">
@@ -279,7 +235,7 @@
                         <!-- WHATSAPP FINAL -->
                         <div style="margin-top: 15px;">
                             <div class="node node-whatsapp" style="max-width: 100%; display: block; margin: 0 auto;">
-                                <div class="timing-badge rescue-badge">+14 días</div>
+                                <div class="timing-badge rescue-badge">+9 días</div>
                                 <div class="node-title">WhatsApp Final - Última Oportunidad</div>
                                 <div class="node-desc">No pierdas tu oportunidad en Tenerife</div>
                                 <div class="templates" style="background: #dcfce7;">
@@ -331,7 +287,7 @@
                             <div class="branch-title branch-stagnant">ACCEDE PERO NO COMPLETA</div>
                             
                             <div class="node node-email-rescue" style="max-width: 100%; margin: 10px 0;">
-                                <div class="timing-badge rescue-badge">+72h</div>
+                                <div class="timing-badge rescue-badge">+48h</div>
                                 <div class="node-title">Email Rescate Configurador</div>
                                 <div class="node-desc">Completa tu vivienda ideal en Tenerife</div>
                                 <div class="templates" style="background: #fecaca;">
@@ -346,7 +302,7 @@
                             <div class="arrow">↓</div>
                             
                             <div class="node node-whatsapp" style="max-width: 100%; margin: 10px 0;">
-                                <div class="timing-badge rescue-badge">+7 días</div>
+                                <div class="timing-badge rescue-badge">+4 días</div>
                                 <div class="node-title">WhatsApp Configurador</div>
                                 <div class="node-desc">Te ayudamos a completar</div>
                                 <div class="templates" style="background: #dcfce7;">
@@ -361,7 +317,7 @@
                             <div class="arrow">↓</div>
                             
                             <div class="node node-whatsapp" style="max-width: 100%; margin: 10px 0;">
-                                <div class="timing-badge rescue-badge">+14 días</div>
+                                <div class="timing-badge rescue-badge">+6 días</div>
                                 <div class="node-title">WhatsApp Final Configurador</div>
                                 <div class="node-desc">Última oportunidad</div>
                                 <div class="templates" style="background: #dcfce7;">
@@ -458,467 +414,11 @@
                         NOTA IMPORTANTE: Este alert tiene prioridad absoluta sobre cualquier etapa del flujo y deriva inmediatamente a Metrovacesa para contacto manual urgente. Comercialización NO exclusiva - competencia activa en zona.
                     </div>
                 </div>
-                
-                <!-- OPCIONES FINAL DE FUNNEL -->
-                <div class="flow-section">
-                    <div class="stage-title">OPCIONES FINAL DE FUNNEL - CALL TO ACTION</div>
-                    
-                    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;">
-                        <div style="text-align: center; background: #e0f2fe; padding: 15px; border-radius: 8px; border: 2px solid #0891b2;">
-                            <div style="font-weight: 700; color: #0e7490; margin-bottom: 8px; font-size: 0.85rem;">
-                                🏝️ ESTÁS EN TENERIFE
-                            </div>
-                            <div style="font-size: 0.7rem; color: #64748b;">
-                                "¿Quieres visitar Residencial Ancor F2 en Arico?"<br><br>
-                                → Agenda visita presencial<br>
-                                → Oficina ventas disponible<br>
-                                → Recorrido por zona
-                            </div>
-                        </div>
-                        
-                        <div style="text-align: center; background: #fef3c7; padding: 15px; border-radius: 8px; border: 2px solid #f59e0b;">
-                            <div style="font-weight: 700; color: #92400e; margin-bottom: 8px; font-size: 0.85rem;">
-                                ✈️ VIAJARÁS PRÓXIMAMENTE
-                            </div>
-                            <div style="font-size: 0.7rem; color: #64748b;">
-                                "¿Puedes viajar en los próximos 2 meses?"<br><br>
-                                → Pre-agenda visita futura<br>
-                                → Coordinación flexible<br>
-                                → Reserva tu cita ahora
-                            </div>
-                        </div>
-                        
-                        <div style="text-align: center; background: #f0fdf4; padding: 15px; border-radius: 8px; border: 2px solid #22c55e;">
-                            <div style="font-weight: 700; color: #166534; margin-bottom: 8px; font-size: 0.85rem;">
-                                💻 VIDEOLLAMADA
-                            </div>
-                            <div style="font-size: 0.7rem; color: #64748b;">
-                                "¿Prefieres una videollamada?"<br><br>
-                                → Consulta online personalizada<br>
-                                → Tour virtual disponible<br>
-                                → Flexible horarios
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div id="templates-tab" class="tab-content">
-            <div class="flow-container">
-                <div class="header">
-                    <h1>Email & WhatsApp Templates - Residencial Ancor F2</h1>
-                    <p>Plantillas multiidioma para promoción Tenerife</p>
-                    <div style="margin-top: 8px;">
-                        <span class="lang-badge lang-en">🇬🇧 ENGLISH</span>
-                        <span class="lang-badge lang-fr">🇫🇷 FRANÇAIS</span>
-                        <span class="lang-badge lang-de">🇩🇪 DEUTSCH</span>
-                        <span class="lang-badge lang-it">🇮🇹 ITALIANO</span>
-                    </div>
-                </div>
-                
-                <div class="template-section">
-                    <!-- EMAIL DIRECTORIOS -->
-                    <h3 style="color: #1f2937; margin-bottom: 15px;">EMAIL Enlace HOME - Directorios (Mailchimp)</h3>
-                    
-                    <div class="language-grid">
-                        <div class="template-item" style="border-left-color: #0891b2;">
-                            <h4><span class="lang-badge lang-en">🇬🇧</span> English - Email Enlace HOME</h4>
-                            <div class="template-content">
-                                <strong>Subject:</strong> Your inquiry about property in Tenerife<br><br>
-                                <strong>Body:</strong><br>
-                                Hello [Name],<br><br>
-                                Thank you for your interest in properties in Tenerife through [Directory Name].<br><br>
-                                We've received your inquiry and we're excited to show you the exclusive opportunities available in one of Europe's most desirable destinations.<br><br>
-                                [EXPLORE OUR HOMES IN TENERIFE]<br><br>
-                                Discover all the details, available units, and personalize your future home.<br><br>
-                                Best regards,<br>
-                                Your Tenerife Property Team
-                            </div>
-                        </div>
-                        
-                        <div class="template-item" style="border-left-color: #0891b2;">
-                            <h4><span class="lang-badge lang-fr">🇫🇷</span> Français - Email Lien HOME</h4>
-                            <div class="template-content">
-                                <strong>Objet:</strong> Votre demande concernant une propriété à Tenerife<br><br>
-                                <strong>Corps:</strong><br>
-                                Bonjour [Name],<br><br>
-                                Merci pour votre intérêt pour les propriétés à Tenerife via [Directory Name].<br><br>
-                                Nous avons reçu votre demande et sommes ravis de vous montrer les opportunités exclusives disponibles dans l'une des destinations les plus prisées d'Europe.<br><br>
-                                [DÉCOUVREZ NOS MAISONS À TENERIFE]<br><br>
-                                Découvrez tous les détails, les unités disponibles et personnalisez votre future maison.<br><br>
-                                Cordialement,<br>
-                                Votre Équipe Immobilière Tenerife
-                            </div>
-                        </div>
-                        
-                        <div class="template-item" style="border-left-color: #0891b2;">
-                            <h4><span class="lang-badge lang-de">🇩🇪</span> Deutsch - E-Mail Link HOME</h4>
-                            <div class="template-content">
-                                <strong>Betreff:</strong> Ihre Anfrage zu Immobilien auf Teneriffa<br><br>
-                                <strong>Text:</strong><br>
-                                Hallo [Name],<br><br>
-                                Vielen Dank für Ihr Interesse an Immobilien auf Teneriffa über [Directory Name].<br><br>
-                                Wir haben Ihre Anfrage erhalten und freuen uns, Ihnen die exklusiven Möglichkeiten in einem der begehrtesten Reiseziele Europas zu zeigen.<br><br>
-                                [ENTDECKEN SIE UNSERE HÄUSER AUF TENERIFFA]<br><br>
-                                Entdecken Sie alle Details, verfügbare Einheiten und personalisieren Sie Ihr zukünftiges Zuhause.<br><br>
-                                Mit freundlichen Grüßen,<br>
-                                Ihr Teneriffa Immobilien Team
-                            </div>
-                        </div>
-                        
-                        <div class="template-item" style="border-left-color: #0891b2;">
-                            <h4><span class="lang-badge lang-it">🇮🇹</span> Italiano - Email Link HOME</h4>
-                            <div class="template-content">
-                                <strong>Oggetto:</strong> La tua richiesta su proprietà a Tenerife<br><br>
-                                <strong>Corpo:</strong><br>
-                                Ciao [Name],<br><br>
-                                Grazie per il tuo interesse per le proprietà a Tenerife tramite [Directory Name].<br><br>
-                                Abbiamo ricevuto la tua richiesta e siamo entusiasti di mostrarti le opportunità esclusive disponibili in una delle destinazioni più desiderabili d'Europa.<br><br>
-                                [SCOPRI LE NOSTRE CASE A TENERIFE]<br><br>
-                                Scopri tutti i dettagli, le unità disponibili e personalizza la tua futura casa.<br><br>
-                                Cordiali saluti,<br>
-                                Il Tuo Team Immobiliare Tenerife
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- WHATSAPP RESCATE DIRECTORIOS -->
-                    <h3 style="color: #1f2937; margin: 30px 0 15px 0;">WhatsApp Rescate Directorios (+72h) - Completar Formulario</h3>
-                    
-                    <div class="language-grid">
-                        <div class="template-item whatsapp-template">
-                            <h4><span class="lang-badge lang-en">🇬🇧</span> English - WhatsApp Rescate Directorio</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Hi! Following up on your inquiry about properties in Tenerife.<br><br>
-                                We sent you the link to explore our exclusive homes, but we noticed you haven't completed the registration form yet.<br><br>
-                                Complete it to unlock all the details, personalize your future home, and access special information about living in Tenerife.<br><br>
-                                [COMPLETE YOUR REGISTRATION]<br><br>
-                                It only takes 2 minutes. Shall we help you?
-                            </div>
-                        </div>
-                        
-                        <div class="template-item whatsapp-template">
-                            <h4><span class="lang-badge lang-fr">🇫🇷</span> Français - WhatsApp Relance Répertoire</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Bonjour! Suite à votre demande concernant les propriétés à Tenerife.<br><br>
-                                Nous vous avons envoyé le lien pour explorer nos maisons exclusives, mais nous avons remarqué que vous n'avez pas encore complété le formulaire d'inscription.<br><br>
-                                Complétez-le pour débloquer tous les détails, personnaliser votre future maison et accéder aux informations spéciales sur la vie à Tenerife.<br><br>
-                                [COMPLÉTEZ VOTRE INSCRIPTION]<br><br>
-                                Cela ne prend que 2 minutes. On peut vous aider?
-                            </div>
-                        </div>
-                        
-                        <div class="template-item whatsapp-template">
-                            <h4><span class="lang-badge lang-de">🇩🇪</span> Deutsch - WhatsApp Rettung Verzeichnis</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Hallo! Bezüglich Ihrer Anfrage zu Immobilien auf Teneriffa.<br><br>
-                                Wir haben Ihnen den Link geschickt, um unsere exklusiven Häuser zu erkunden, aber wir haben bemerkt, dass Sie das Registrierungsformular noch nicht ausgefüllt haben.<br><br>
-                                Füllen Sie es aus, um alle Details freizuschalten, Ihr zukünftiges Zuhause zu personalisieren und auf spezielle Informationen über das Leben auf Teneriffa zuzugreifen.<br><br>
-                                [VERVOLLSTÄNDIGEN SIE IHRE REGISTRIERUNG]<br><br>
-                                Es dauert nur 2 Minuten. Können wir Ihnen helfen?
-                            </div>
-                        </div>
-                        
-                        <div class="template-item whatsapp-template">
-                            <h4><span class="lang-badge lang-it">🇮🇹</span> Italiano - WhatsApp Recupero Directory</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Ciao! In merito alla tua richiesta su proprietà a Tenerife.<br><br>
-                                Ti abbiamo inviato il link per esplorare le nostre case esclusive, ma abbiamo notato che non hai ancora completato il modulo di registrazione.<br><br>
-                                Completalo per sbloccare tutti i dettagli, personalizzare la tua futura casa e accedere a informazioni speciali sulla vita a Tenerife.<br><br>
-                                [COMPLETA LA TUA REGISTRAZIONE]<br><br>
-                                Ci vogliono solo 2 minuti. Possiamo aiutarti?
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- RESCUE EMAIL TEMPLATES -->
-                    <h3 style="color: #1f2937; margin: 30px 0 15px 0;">RESCUE Email Templates (+72h) - Universal Tenerife Lifestyle</h3>
-                    
-                    <div class="language-grid">
-                        <div class="template-item">
-                            <h4><span class="lang-badge lang-en">🇬🇧</span> English - Rescue Email</h4>
-                            <div class="template-content">
-                                <strong>Subject:</strong> Your dream home in Tenerife awaits<br><br>
-                                <strong>Body:</strong><br>
-                                Hello [Name],<br><br>
-                                Your exclusive access to properties in Tenerife is still active. This is your opportunity to own a home in Europe's most privileged climate.<br><br>
-                                <strong>Why Tenerife?</strong><br>
-                                • 300+ days of sunshine per year<br>
-                                • Eternal spring climate<br>
-                                • Growing international community<br>
-                                • Excellent investment potential<br>
-                                • Top-quality infrastructure<br>
-                                • Tax advantages for residents<br><br>
-                                [EXPLORE AVAILABLE HOMES]<br><br>
-                                Limited availability. Secure your place in paradise.<br><br>
-                                Best regards,<br>
-                                Your Tenerife Property Team
-                            </div>
-                        </div>
-                        
-                        <div class="template-item">
-                            <h4><span class="lang-badge lang-fr">🇫🇷</span> Français - Email Relance</h4>
-                            <div class="template-content">
-                                <strong>Objet:</strong> Votre maison de rêve à Tenerife vous attend<br><br>
-                                <strong>Corps:</strong><br>
-                                Bonjour [Name],<br><br>
-                                Votre accès exclusif aux propriétés à Tenerife est toujours actif. C'est votre opportunité de posséder une maison dans le climat le plus privilégié d'Europe.<br><br>
-                                <strong>Pourquoi Tenerife?</strong><br>
-                                • Plus de 300 jours de soleil par an<br>
-                                • Climat de printemps éternel<br>
-                                • Communauté internationale croissante<br>
-                                • Excellent potentiel d'investissement<br>
-                                • Infrastructure de qualité supérieure<br>
-                                • Avantages fiscaux pour les résidents<br><br>
-                                [EXPLORER LES MAISONS DISPONIBLES]<br><br>
-                                Disponibilité limitée. Assurez votre place au paradis.<br><br>
-                                Cordialement,<br>
-                                Votre Équipe Immobilière Tenerife
-                            </div>
-                        </div>
-                        
-                        <div class="template-item">
-                            <h4><span class="lang-badge lang-de">🇩🇪</span> Deutsch - Rettungs-E-Mail</h4>
-                            <div class="template-content">
-                                <strong>Betreff:</strong> Ihr Traumhaus auf Teneriffa wartet<br><br>
-                                <strong>Text:</strong><br>
-                                Hallo [Name],<br><br>
-                                Ihr exklusiver Zugang zu Immobilien auf Teneriffa ist noch aktiv. Dies ist Ihre Gelegenheit, ein Haus im privilegiertesten Klima Europas zu besitzen.<br><br>
-                                <strong>Warum Teneriffa?</strong><br>
-                                • Über 300 Sonnentage pro Jahr<br>
-                                • Ewiges Frühlingsklima<br>
-                                • Wachsende internationale Gemeinschaft<br>
-                                • Hervorragendes Investitionspotenzial<br>
-                                • Erstklassige Infrastruktur<br>
-                                • Steuervorteile für Residenten<br><br>
-                                [VERFÜGBARE HÄUSER ERKUNDEN]<br><br>
-                                Begrenzte Verfügbarkeit. Sichern Sie sich Ihren Platz im Paradies.<br><br>
-                                Mit freundlichen Grüßen,<br>
-                                Ihr Teneriffa Immobilien Team
-                            </div>
-                        </div>
-                        
-                        <div class="template-item">
-                            <h4><span class="lang-badge lang-it">🇮🇹</span> Italiano - Email di Recupero</h4>
-                            <div class="template-content">
-                                <strong>Oggetto:</strong> La tua casa dei sogni a Tenerife ti aspetta<br><br>
-                                <strong>Corpo:</strong><br>
-                                Ciao [Name],<br><br>
-                                Il tuo accesso esclusivo alle proprietà a Tenerife è ancora attivo. Questa è la tua opportunità di possedere una casa nel clima più privilegiato d'Europa.<br><br>
-                                <strong>Perché Tenerife?</strong><br>
-                                • Oltre 300 giorni di sole all'anno<br>
-                                • Clima di eterna primavera<br>
-                                • Comunità internazionale in crescita<br>
-                                • Eccellente potenziale di investimento<br>
-                                • Infrastrutture di massima qualità<br>
-                                • Vantaggi fiscali per i residenti<br><br>
-                                [ESPLORA CASE DISPONIBILI]<br><br>
-                                Disponibilità limitata. Assicurati il tuo posto in paradiso.<br><br>
-                                Cordiali saluti,<br>
-                                Il Tuo Team Immobiliare Tenerife
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- WHATSAPP TEMPLATES -->
-                    <h3 style="color: #1f2937; margin: 30px 0 15px 0;">WhatsApp Templates (+7 días) - Oportunidad Tenerife</h3>
-                    
-                    <div class="language-grid">
-                        <div class="template-item whatsapp-template">
-                            <h4><span class="lang-badge lang-en">🇬🇧</span> English - WhatsApp</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Hi! Following up on your interest in properties in Tenerife.<br><br>
-                                The best located homes with sea views are being reserved quickly. Don't miss your chance to live in paradise with 300+ days of sun.<br><br>
-                                Modern properties, excellent quality, guaranteed construction.<br><br>
-                                Shall we complete your configuration to secure your ideal home?
-                            </div>
-                        </div>
-                        
-                        <div class="template-item whatsapp-template">
-                            <h4><span class="lang-badge lang-fr">🇫🇷</span> Français - WhatsApp</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Bonjour! Suite à votre intérêt pour les propriétés à Tenerife.<br><br>
-                                Les maisons les mieux situées avec vue sur la mer se réservent rapidement. Ne manquez pas votre chance de vivre au paradis avec plus de 300 jours de soleil.<br><br>
-                                Propriétés modernes, excellente qualité, construction garantie.<br><br>
-                                On finalise votre configuration pour sécuriser votre maison idéale?
-                            </div>
-                        </div>
-                        
-                        <div class="template-item whatsapp-template">
-                            <h4><span class="lang-badge lang-de">🇩🇪</span> Deutsch - WhatsApp</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Hallo! Bezüglich Ihres Interesses an Immobilien auf Teneriffa.<br><br>
-                                Die bestgelegenen Häuser mit Meerblick werden schnell reserviert. Verpassen Sie nicht Ihre Chance, im Paradies mit über 300 Sonnentagen zu leben.<br><br>
-                                Moderne Immobilien, ausgezeichnete Qualität, garantierte Konstruktion.<br><br>
-                                Sollen wir Ihre Konfiguration abschließen, um Ihr ideales Zuhause zu sichern?
-                            </div>
-                        </div>
-                        
-                        <div class="template-item whatsapp-template">
-                            <h4><span class="lang-badge lang-it">🇮🇹</span> Italiano - WhatsApp</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Ciao! In merito al tuo interesse per le proprietà a Tenerife.<br><br>
-                                Le case meglio posizionate con vista mare si stanno prenotando velocemente. Non perdere la possibilità di vivere in paradiso con oltre 300 giorni di sole.<br><br>
-                                Proprietà moderne, qualità eccellente, costruzione garantita.<br><br>
-                                Completiamo la tua configurazione per assicurare la tua casa ideale?
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- WHATSAPP FINAL -->
-                    <h3 style="color: #1f2937; margin: 30px 0 15px 0;">WhatsApp Final Templates (+14 días) - Última Oportunidad</h3>
-                    
-                    <div class="language-grid">
-                        <div class="template-item rescue-template">
-                            <h4><span class="lang-badge lang-en">🇬🇧</span> English - Final WhatsApp</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Last call for your opportunity in Tenerife.<br><br>
-                                The best orientations and units with premium views are almost gone. Don't let this chance slip away to own your home in Europe's best climate.<br><br>
-                                Guaranteed construction. No surprises.<br><br>
-                                Shall we schedule a video call to discuss your future home?
-                            </div>
-                        </div>
-                        
-                        <div class="template-item rescue-template">
-                            <h4><span class="lang-badge lang-fr">🇫🇷</span> Français - WhatsApp Final</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Dernier appel pour votre opportunité à Tenerife.<br><br>
-                                Les meilleures orientations et unités avec vues premium sont presque épuisées. Ne laissez pas passer cette chance de posséder votre maison dans le meilleur climat d'Europe.<br><br>
-                                Construction garantie. Pas de surprises.<br><br>
-                                On programme un appel vidéo pour parler de votre future maison?
-                            </div>
-                        </div>
-                        
-                        <div class="template-item rescue-template">
-                            <h4><span class="lang-badge lang-de">🇩🇪</span> Deutsch - Finaler WhatsApp</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Letzter Aufruf für Ihre Chance auf Teneriffa.<br><br>
-                                Die besten Ausrichtungen und Einheiten mit Premium-Aussicht sind fast weg. Lassen Sie sich diese Gelegenheit nicht entgehen, Ihr Zuhause im besten Klima Europas zu besitzen.<br><br>
-                                Garantierte Konstruktion. Keine Überraschungen.<br><br>
-                                Vereinbaren wir einen Videoanruf, um über Ihr zukünftiges Zuhause zu sprechen?
-                            </div>
-                        </div>
-                        
-                        <div class="template-item rescue-template">
-                            <h4><span class="lang-badge lang-it">🇮🇹</span> Italiano - WhatsApp Finale</h4>
-                            <div class="template-content" style="font-family: monospace;">
-                                Ultima chiamata per la tua opportunità a Tenerife.<br><br>
-                                I migliori orientamenti e unità con vista premium stanno per esaurirsi. Non lasciarti sfuggire questa occasione di possedere la tua casa nel miglior clima d'Europa.<br><br>
-                                Costruzione garantita. Nessuna sorpresa.<br><br>
-                                Programmiamo una videochiamata per parlare della tua futura casa?
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- CONFIGURADOR RESCUE -->
-                    <h3 style="color: #1f2937; margin: 30px 0 15px 0;">SELECT - Configurador Rescue Email Templates (+72h)</h3>
-                    
-                    <div class="language-grid">
-                        <div class="template-item">
-                            <h4><span class="lang-badge lang-en">🇬🇧</span> English - Configurator Rescue</h4>
-                            <div class="template-content">
-                                <strong>Subject:</strong> Complete your configuration - Best homes reserving fast<br><br>
-                                <strong>Body:</strong><br>
-                                Hello [Name],<br><br>
-                                You started your home configuration but didn't finish. The best oriented units with premium views are being reserved quickly.<br><br>
-                                <strong>Complete your configurator to:</strong><br>
-                                • Secure the best home for you<br>
-                                • Choose between 1, 2 or 3 bedrooms<br>
-                                • Customize finishes to your taste<br>
-                                • Guarantee your priority appointment<br>
-                                • Take advantage of current conditions<br><br>
-                                Just schedule your appointment with our team.<br><br>
-                                [COMPLETE CONFIGURATOR NOW]<br><br>
-                                Guaranteed project. Don't miss this opportunity.<br><br>
-                                Best regards,<br>
-                                Your Tenerife Property Team
-                            </div>
-                        </div>
-                        
-                        <div class="template-item">
-                            <h4><span class="lang-badge lang-fr">🇫🇷</span> Français - Relance Configurateur</h4>
-                            <div class="template-content">
-                                <strong>Objet:</strong> Complétez votre configuration - Meilleures maisons réservées rapidement<br><br>
-                                <strong>Corps:</strong><br>
-                                Bonjour [Name],<br><br>
-                                Vous avez commencé votre configuration de maison mais ne l'avez pas terminée. Les unités les mieux orientées avec vues premium se réservent rapidement.<br><br>
-                                <strong>Complétez votre configurateur pour:</strong><br>
-                                • Sécuriser la meilleure maison pour vous<br>
-                                • Choisir entre 1, 2 ou 3 chambres<br>
-                                • Personnaliser les finitions à votre goût<br>
-                                • Garantir votre rendez-vous prioritaire<br>
-                                • Profiter des conditions actuelles<br><br>
-                                Il suffit de programmer votre rendez-vous avec notre équipe.<br><br>
-                                [COMPLÉTER LE CONFIGURATEUR MAINTENANT]<br><br>
-                                Projet garanti. Ne manquez pas cette opportunité.<br><br>
-                                Cordialement,<br>
-                                Votre Équipe Immobilière Tenerife
-                            </div>
-                        </div>
-                        
-                        <div class="template-item">
-                            <h4><span class="lang-badge lang-de">🇩🇪</span> Deutsch - Konfigurator-Rettung</h4>
-                            <div class="template-content">
-                                <strong>Betreff:</strong> Vervollständigen Sie Ihre Konfiguration - Beste Häuser werden schnell reserviert<br><br>
-                                <strong>Text:</strong><br>
-                                Hallo [Name],<br><br>
-                                Sie haben Ihre Hauskonfiguration begonnen, aber nicht abgeschlossen. Die am besten ausgerichteten Einheiten mit Premium-Aussicht werden schnell reserviert.<br><br>
-                                <strong>Vervollständigen Sie Ihren Konfigurator um:</strong><br>
-                                • Das beste Haus für Sie zu sichern<br>
-                                • Zwischen 1, 2 oder 3 Schlafzimmern zu wählen<br>
-                                • Oberflächen nach Ihrem Geschmack anzupassen<br>
-                                • Ihren Prioritätstermin zu garantieren<br>
-                                • Aktuelle Bedingungen zu nutzen<br><br>
-                                Vereinbaren Sie einfach Ihren Termin mit unserem Team.<br><br>
-                                [KONFIGURATOR JETZT VERVOLLSTÄNDIGEN]<br><br>
-                                Garantiertes Projekt. Verpassen Sie diese Gelegenheit nicht.<br><br>
-                                Mit freundlichen Grüßen,<br>
-                                Ihr Teneriffa Immobilien Team
-                            </div>
-                        </div>
-                        
-                        <div class="template-item">
-                            <h4><span class="lang-badge lang-it">🇮🇹</span> Italiano - Recupero Configuratore</h4>
-                            <div class="template-content">
-                                <strong>Oggetto:</strong> Completa la tua configurazione - Migliori case prenotate velocemente<br><br>
-                                <strong>Corpo:</strong><br>
-                                Ciao [Name],<br><br>
-                                Hai iniziato la configurazione della tua casa ma non l'hai finita. Le unità meglio orientate con vista premium si stanno prenotando velocemente.<br><br>
-                                <strong>Completa il tuo configuratore per:</strong><br>
-                                • Assicurare la casa migliore per te<br>
-                                • Scegliere tra 1, 2 o 3 camere da letto<br>
-                                • Personalizzare le finiture a tuo gusto<br>
-                                • Garantire il tuo appuntamento prioritario<br>
-                                • Approfittare delle condizioni attuali<br><br>
-                                Basta programmare il tuo appuntamento con il nostro team.<br><br>
-                                [COMPLETA IL CONFIGURATORE ORA]<br><br>
-                                Progetto garantito. Non perdere questa opportunità.<br><br>
-                                Cordiali saluti,<br>
-                                Il Tuo Team Immobiliare Tenerife
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
     
     <script>
-        function showTab(tabName) {
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            
-            document.querySelectorAll('.tab-button').forEach(button => {
-                button.classList.remove('active');
-            });
-            
-            document.getElementById(tabName + '-tab').classList.add('active');
-            
-            event.target.classList.add('active');
-        }
-        
         document.addEventListener('DOMContentLoaded', () => {
             const nodes = document.querySelectorAll('.node');
             nodes.forEach((node, index) => {
